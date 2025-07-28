@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goshen Campus Oasis Links</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN with Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2f6639',
+            secondary: '#63361d',
+            dark: '#1c2a21',
+            cream: '#f4e9d3',
+            gold: '#F0C75E',
+          },
+          fontFamily: {
+            heading: ['Merriweather', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
+  </script>
+</head>
+
+<body class="bg-cream text-dark font-body min-h-screen flex flex-col items-center px-6 pt-20 pb-10">
+
+  <!-- Logo -->
+  <div class="mb-6">
+    <img src="assets/images/goshen oasis logo - no bg.png" alt="Goshen Logo" class="w-28 sm:w-36 mx-auto drop-shadow-md">
+  </div>
+
+  <!-- Heading -->
+  <h1 class="text-3xl font-heading text-primary mb-2 text-center">Goshen Campus Oasis</h1>
+  <p class="text-center text-dark/80 mb-8 max-w-md text-lg">
+    Girls-only boarding sanctuary near GZU. Connect with us below.
+  </p>
+
+  <!-- Link Buttons -->
+  <div class="w-full max-w-sm space-y-4 text-center">
+
+    <a href="https://goshinoasisboarding.netlify.app/" target="_blank"
+       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md shadow hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+      <i data-lucide="globe" class="w-5 h-5"></i> Visit Website
+    </a>
+
+    <a href="https://wa.me/2637XXXXXXXX" target="_blank"
+       class="block bg-primary text-white font-semibold py-3 px-6 rounded-md shadow hover:bg-secondary transition flex items-center justify-center gap-2">
+      <i data-lucide="phone" class="w-5 h-5"></i> Chat on WhatsApp
+    </a>
+
+    <a href="https://facebook.com/yourpage" target="_blank"
+       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+      <i data-lucide="facebook" class="w-5 h-5"></i> Facebook Page
+    </a>
+
+    <a href="https://instagram.com/yourpage" target="_blank"
+       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+      <i data-lucide="instagram" class="w-5 h-5"></i> Instagram
+    </a>
+
+    <a href="https://tiktok.com/@yourhandle" target="_blank"
+       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+      <i data-lucide="music" class="w-5 h-5"></i> TikTok
+    </a>
+
+    <a href="https://youtube.com/yourchannel" target="_blank"
+       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
+      <i data-lucide="youtube" class="w-5 h-5"></i> YouTube Channel
+    </a>
+
+  </div>
+  <!-- QR Code -->
+<div class="mt-10 text-center">
+  <p class="text-sm text-dark mb-2">Scan to share</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://goshinoasisboarding.netlify.app/&size=150x150"
+       alt="QR Code" class="mx-auto border border-primary p-1 rounded shadow-md bg-white" />
+</div>
+
+
+  <!-- Footer -->
+  <footer class="mt-10 text-xs text-dark/50 text-center">
+    © 2025 Goshen Campus Oasis
+  </footer>
+
+</body>
+</html>
