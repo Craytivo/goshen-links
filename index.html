@@ -6,8 +6,6 @@
   <title>Goshen Campus Oasis Links</title>
   <link rel="icon" href="assets\images\favicon.ico" type="image/x-icon">
 <link rel="icon" href="assets\images\favicon-32x32.png" type="image/png">
-
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
 
@@ -47,11 +45,21 @@
     <img src="assets/images/goshen oasis logo - no bg.png" alt="Goshen Logo" class="w-28 sm:w-36 mx-auto drop-shadow-md">
   </div>
 
-  <!-- Heading -->
-  <h1 class="text-3xl font-heading text-primary mb-2 text-center">Goshen Campus Oasis</h1>
-  <p class="text-center text-dark/80 mb-8 max-w-md text-lg">
-    Girls-only boarding sanctuary near GZU. Connect with us below.
+<!-- Heading -->
+<div class="text-center mb-10">
+  <h1 class="text-4xl sm:text-5xl font-heading text-primary leading-tight">
+    Goshen Campus Oasis
+  </h1>
+  <p class="text-sm sm:text-base text-yellow-600 uppercase tracking-wider mt-2">
+  Masvingo, Zimbabwe
+</p>
+
+  <p class="mt-4 text-dark/80 text-lg sm:text-xl max-w-md mx-auto leading-relaxed">
+    A ladies-only boarding sanctuary designed for growth, comfort, and academic excellence near GZU.
   </p>
+</div>
+
+
 
   <!-- Link Buttons -->
   <div class="w-full max-w-sm space-y-4 text-center">
@@ -61,44 +69,59 @@
       <i data-lucide="globe" class="w-5 h-5"></i> Visit Website
     </a>
 
-    <a href="https://wa.me/2637XXXXXXXX" target="_blank"
+    <a href="https://wa.me/+263773623441" target="_blank"
        class="block bg-primary text-white font-semibold py-3 px-6 rounded-md shadow hover:bg-secondary transition flex items-center justify-center gap-2">
       <i data-lucide="phone" class="w-5 h-5"></i> Chat on WhatsApp
     </a>
 
-    <a href="https://facebook.com/yourpage" target="_blank"
+    <a href="https://www.facebook.com/profile.php?id=61578948534844" target="_blank"
        class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
       <i data-lucide="facebook" class="w-5 h-5"></i> Facebook Page
     </a>
 
-    <a href="https://instagram.com/yourpage" target="_blank"
-       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
-      <i data-lucide="instagram" class="w-5 h-5"></i> Instagram
-    </a>
-
-    <a href="https://tiktok.com/@yourhandle" target="_blank"
-       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
-      <i data-lucide="music" class="w-5 h-5"></i> TikTok
-    </a>
-
-    <a href="https://youtube.com/yourchannel" target="_blank"
-       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
-      <i data-lucide="youtube" class="w-5 h-5"></i> YouTube Channel
-    </a>
+   
 
   </div>
-  <!-- QR Code -->
-<div class="mt-10 text-center">
+<!-- QR Code -->
+<div class="mt-14 flex flex-col items-center qr-fade-in">
   <p class="text-sm text-dark mb-2">Scan to share</p>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://goshinoasisboarding.netlify.app/&size=150x150"
-       alt="QR Code" class="mx-auto border border-primary p-1 rounded shadow-md bg-white" />
+  <div class="relative group bg-white border border-primary p-2 rounded-md shadow-md">
+    <img src="assets/images/QR.png"
+         alt="QR Code"
+         class="w-36 sm:w-32 object-cover transition-transform duration-300 group-hover:scale-105" />
+
+    <!-- Tooltip -->
+    <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+      Tap and hold to save QR
+    </div>
+  </div>
 </div>
 
+<style>
+  .qr-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
 
-  <!-- Footer -->
-  <footer class="mt-10 text-xs text-dark/50 text-center">
-    © 2025 Goshen Campus Oasis
-  </footer>
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+
+<!-- Footer -->
+<footer class="mt-10 text-xs text-dark/50 text-center">
+  © 2025 Goshen Campus Oasis &bull; Application by 
+  <a href="https://craytivo.com" target="_blank" class="text-primary hover:underline hover:text-secondary transition">
+    Craytivo
+  </a>
+</footer>
+
 
 </body>
 </html>
