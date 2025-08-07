@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Goshen Campus Oasis Links</title>
-  <link rel="icon" href="assets\images\favicon.ico" type="image/x-icon">
-<link rel="icon" href="assets\images\favicon-32x32.png" type="image/png">
+  <title>Goshen Campus Oasis | Premium Boarding</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+  
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
   <!-- Tailwind CDN with Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -18,14 +19,40 @@
           colors: {
             primary: '#2f6639',
             secondary: '#63361d',
-            dark: '#1c2a21',
-            cream: '#f4e9d3',
-            gold: '#F0C75E',
+            dark: '#1a1a1a',
+            cream: '#faf9f6',
+            gold: '#d4af37',
+            accent: '#8b5cf6',
+            success: '#10b981',
           },
           fontFamily: {
-            heading: ['Merriweather', 'serif'],
+            heading: ['Playfair Display', 'serif'],
             body: ['Inter', 'sans-serif'],
-          }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            scaleIn: {
+              '0%': { opacity: '0', transform: 'scale(0.9)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
         }
       }
     };
@@ -34,94 +61,172 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
+      
+      // Add staggered animation to links
+      const links = document.querySelectorAll('.link-card');
+      links.forEach((link, index) => {
+        link.style.animationDelay = `${index * 0.1}s`;
+      });
     });
   </script>
 </head>
 
-<body class="bg-cream text-dark font-body min-h-screen flex flex-col items-center px-6 pt-20 pb-10">
-
-  <!-- Logo -->
-  <div class="mb-6">
-    <img src="assets/images/goshen oasis logo - no bg.png" alt="Goshen Logo" class="w-28 sm:w-36 mx-auto drop-shadow-md">
+<body class="bg-gradient-to-br from-cream via-white to-cream text-dark font-body min-h-screen">
+  <!-- Background Pattern -->
+  <div class="fixed inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, #2f6639 1px, transparent 0); background-size: 20px 20px;"></div>
   </div>
 
-<!-- Heading -->
-<div class="text-center mb-10">
-  <h1 class="text-4xl sm:text-5xl font-heading text-primary leading-tight">
-    Goshen Campus Oasis
-  </h1>
-  <p class="text-sm sm:text-base text-yellow-600 uppercase tracking-wider mt-2">
-  Masvingo, Zimbabwe
-</p>
+  <div class="relative z-10 flex flex-col items-center px-6 pt-16 pb-10 min-h-screen">
+    
+    <!-- Header Section -->
+    <div class="w-full max-w-md mx-auto text-center animate-fade-in">
+      <!-- Logo with floating animation -->
+      <div class="mb-8 animate-float">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+          <img src="assets/images/goshen oasis logo - no bg.png" 
+               alt="Goshen Campus Oasis" 
+               class="relative w-24 sm:w-28 mx-auto drop-shadow-lg">
+        </div>
+      </div>
 
-  <p class="mt-4 text-dark/80 text-lg sm:text-xl max-w-md mx-auto leading-relaxed">
-    A ladies-only boarding sanctuary designed for growth, comfort, and academic excellence near GZU.
-  </p>
-</div>
-
-
-
-  <!-- Link Buttons -->
-  <div class="w-full max-w-sm space-y-4 text-center">
-
-    <a href="https://goshinoasisboarding.netlify.app/" target="_blank"
-       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md shadow hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
-      <i data-lucide="globe" class="w-5 h-5"></i> Visit Website
-    </a>
-
-    <a href="https://wa.me/+263773623441" target="_blank"
-       class="block bg-primary text-white font-semibold py-3 px-6 rounded-md shadow hover:bg-secondary transition flex items-center justify-center gap-2">
-      <i data-lucide="phone" class="w-5 h-5"></i> Chat on WhatsApp
-    </a>
-
-    <a href="https://www.facebook.com/profile.php?id=61578948534844" target="_blank"
-       class="block bg-white border border-primary text-primary font-medium py-3 px-6 rounded-md hover:bg-primary hover:text-white transition flex items-center justify-center gap-2">
-      <i data-lucide="facebook" class="w-5 h-5"></i> Facebook Page
-    </a>
-
-   
-
-  </div>
-<!-- QR Code -->
-<div class="mt-14 flex flex-col items-center qr-fade-in">
-  <p class="text-sm text-dark mb-2">Scan to share</p>
-  <div class="relative group bg-white border border-primary p-2 rounded-md shadow-md">
-    <img src="assets/images/QR.png"
-         alt="QR Code"
-         class="w-36 sm:w-32 object-cover transition-transform duration-300 group-hover:scale-105" />
-
-    <!-- Tooltip -->
-    <div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-      Tap and hold to save QR
+      <!-- Title and Subtitle -->
+      <div class="space-y-4 mb-12">
+        <h1 class="text-3xl sm:text-4xl font-heading font-semibold text-dark leading-tight">
+          Goshen Campus Oasis
+        </h1>
+        <div class="flex items-center justify-center gap-2 text-sm text-dark/60 font-medium">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          <span>Masvingo, Zimbabwe</span>
+        </div>
+        <p class="text-dark/70 text-base leading-relaxed max-w-sm mx-auto">
+          A premium ladies-only boarding sanctuary designed for academic excellence, personal growth, and lasting friendships.
+        </p>
+      </div>
     </div>
+
+    <!-- Links Section -->
+    <div class="w-full max-w-sm space-y-4 animate-slide-up">
+      
+      <!-- Primary CTA -->
+      <a href="https://goshinoasisboarding.netlify.app/" 
+         target="_blank"
+         class="link-card block group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="relative flex items-center justify-center gap-3">
+          <i data-lucide="globe" class="w-5 h-5"></i>
+          <span>Visit Our Website</span>
+          <i data-lucide="external-link" class="w-4 h-4 opacity-60"></i>
+        </div>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/+263773623441" 
+         target="_blank"
+         class="link-card block group relative overflow-hidden bg-gradient-to-r from-success to-success/80 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-r from-success/80 to-success/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="relative flex items-center justify-center gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Chat on WhatsApp</span>
+          <i data-lucide="external-link" class="w-4 h-4 opacity-60"></i>
+        </div>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61578948534844" 
+         target="_blank"
+         class="link-card block group relative overflow-hidden bg-gradient-to-r from-accent to-accent/80 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent/80 to-accent/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="relative flex items-center justify-center gap-3">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+          <span>Follow on Facebook</span>
+          <i data-lucide="external-link" class="w-4 h-4 opacity-60"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="mt-16 animate-scale-in">
+      <div class="text-center space-y-4">
+        <p class="text-sm text-dark/60 font-medium">Share this page</p>
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+          <div class="relative bg-white border border-primary/20 p-4 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+            <img src="assets/images/QR.png"
+                 alt="QR Code for Goshen Campus Oasis"
+                 class="w-32 h-32 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" />
+          </div>
+          
+          <!-- Enhanced Tooltip -->
+          <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-20 shadow-lg">
+            <div class="flex items-center gap-2">
+              <i data-lucide="smartphone" class="w-4 h-4"></i>
+              <span>Tap and hold to save</span>
+            </div>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-dark"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center animate-fade-in" style="animation-delay: 0.8s;">
+      <div class="text-xs text-dark/40 space-y-2">
+        <p>© 2025 Goshen Campus Oasis</p>
+        <p>Designed with ❤️ by 
+          <a href="https://craytivo.com" 
+             target="_blank" 
+             class="text-primary hover:text-secondary transition-colors duration-200 font-medium">
+            Craytivo
+          </a>
+        </p>
+      </div>
+    </footer>
+
   </div>
-</div>
 
-<style>
-  .qr-fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  <style>
+    .link-card {
+      opacity: 0;
+      animation: slideUp 0.6s ease-out forwards;
     }
-  }
-</style>
-
-
-
-<!-- Footer -->
-<footer class="mt-10 text-xs text-dark/50 text-center">
-  © 2025 Goshen Campus Oasis &bull; Application by 
-  <a href="https://craytivo.com" target="_blank" class="text-primary hover:underline hover:text-secondary transition">
-    Craytivo
-  </a>
-</footer>
-
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #2f6639;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #63361d;
+    }
+  </style>
 
 </body>
 </html>
